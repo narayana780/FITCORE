@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>FITCORE - Premium Fitness & Gym</title>
     
     <!-- Google Fonts -->
@@ -39,10 +39,10 @@
         }
     </script>
 </head>
-<body class="bg-darker text-white font-sans antialiased overflow-x-hidden">
+<body class="bg-darker text-white font-sans antialiased overflow-x-hidden w-full relative">
 
     <!-- Navbar -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-transparent">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-3 md:py-4 bg-transparent border-b border-transparent">
         <div class="container mx-auto px-4 md:px-6 lg:px-8">
             <div class="flex justify-between items-center">
                 <!-- Logo -->
@@ -71,18 +71,18 @@
         </div>
 
         <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="fixed inset-0 bg-darker/95 backdrop-blur-md z-40 transform translate-x-full transition-transform duration-300 flex justify-center items-center h-screen w-full md:hidden">
-            <button id="close-menu-btn" class="absolute top-6 right-6 text-3xl text-white hover:text-neon">
+        <div id="mobile-menu" class="fixed inset-0 bg-darker/80 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-300 flex justify-center items-center h-[100dvh] w-full md:hidden">
+            <button id="close-menu-btn" class="absolute top-4 right-4 md:top-6 md:right-6 text-4xl text-white hover:text-neon p-2">
                 <i class="fas fa-times"></i>
             </button>
-            <div class="flex flex-col space-y-6 text-center text-2xl font-heading font-bold tracking-wider">
-                <a href="#home" class="mobile-link text-white hover:text-neon">HOME</a>
-                <a href="#about" class="mobile-link text-white hover:text-neon">ABOUT</a>
-                <a href="#services" class="mobile-link text-white hover:text-neon">SERVICES</a>
-                <a href="#trainers" class="mobile-link text-white hover:text-neon">TRAINERS</a>
-                <a href="#pricing" class="mobile-link text-white hover:text-neon">PRICING</a>
-                <div id="mobile-auth-section" class="flex flex-col space-y-4 pt-4 border-t border-white/10 w-3/4 mx-auto">
-                    <button id="mobile-login-btn" class="mobile-link text-white hover:text-neon">LOGIN</button>
+            <div class="flex flex-col space-y-6 text-center text-xl font-heading font-bold tracking-wider w-full px-8">
+                <a href="#home" class="mobile-link text-white hover:text-neon py-2">HOME</a>
+                <a href="#about" class="mobile-link text-white hover:text-neon py-2">ABOUT</a>
+                <a href="#services" class="mobile-link text-white hover:text-neon py-2">SERVICES</a>
+                <a href="#trainers" class="mobile-link text-white hover:text-neon py-2">TRAINERS</a>
+                <a href="#pricing" class="mobile-link text-white hover:text-neon py-2">PRICING</a>
+                <div id="mobile-auth-section" class="flex flex-col space-y-4 pt-6 border-t border-white/10 w-full max-w-[250px] mx-auto mt-4">
+                    <button id="mobile-login-btn" class="mobile-link text-white hover:text-neon py-2">LOGIN</button>
                     <button id="mobile-signup-btn" class="mobile-link text-neon font-bold">SIGN UP</button>
                 </div>
             </div>
@@ -100,17 +100,17 @@
             </div>
             
             <div class="container mx-auto px-4 z-20 text-center relative max-w-4xl">
-                <span class="reveal text-neon font-heading tracking-[0.2em] font-bold uppercase mb-4 block">Push Your Limits</span>
-                <h1 class="reveal font-heading text-5xl md:text-7xl lg:text-8xl font-bold uppercase leading-tight mb-6 mt-2">
+                <span class="reveal text-neon font-heading tracking-[0.2em] font-bold uppercase mb-2 md:mb-4 block text-sm md:text-base">Push Your Limits</span>
+                <h1 class="reveal font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold uppercase leading-tight mb-4 md:mb-6 mt-2">
                     Forge Your <span class="text-gradient">Best</span> Self
                 </h1>
-                <p class="reveal text-grayLight text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+                <p class="reveal text-grayLight text-base md:text-xl mb-8 md:mb-10 max-w-2xl mx-auto px-2">
                     Experience elite tier equipment, professional coaching, and a community dedicated to building unbreakable strength and endurance.
                 </p>
-                <div class="reveal flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-                    <a href="#pricing" class="px-8 py-3 bg-neon text-darker font-bold rounded-full hover:bg-white transition-colors w-full sm:w-auto text-center">JOIN NOW</a>
-                    <a href="#services" class="px-8 py-3 border-2 border-white text-white font-bold rounded-full hover:border-neon hover:text-neon transition-colors w-full sm:w-auto text-center flex items-center justify-center">
-                        <i class="fas fa-play-circle mr-2"></i> VIEW PROGRAMS
+                <div class="reveal flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6 mt-6 w-full max-w-[280px] md:max-w-none mx-auto">
+                    <a href="#pricing" class="px-8 py-3 md:py-4 bg-neon text-darker font-bold rounded-full hover:bg-white transition-colors w-full md:w-auto text-center tracking-wide">JOIN NOW</a>
+                    <a href="#services" class="px-8 py-3 md:py-4 border-2 border-white text-white font-bold rounded-full hover:border-neon hover:text-neon transition-colors w-full md:w-auto text-center flex items-center justify-center tracking-wide">
+                        <i class="fas fa-play-circle mr-2 text-lg"></i> VIEW PROGRAMS
                     </a>
                 </div>
             </div>
@@ -132,26 +132,26 @@
                     <!-- Text Content -->
                     <div class="reveal-right lg:w-1/2">
                         <span class="text-neon font-heading tracking-widest font-bold uppercase mb-2 block">Our Story</span>
-                        <h2 class="text-4xl md:text-5xl font-heading font-bold mb-6">More Than Just A Gym. It's A <span class="text-gradient">Lifestyle.</span></h2>
+                        <h2 class="text-3xl md:text-5xl font-heading font-bold mb-4 sm:mb-6 leading-tight">More Than Just A Gym. It's A <span class="text-gradient">Lifestyle.</span></h2>
                         <p class="text-grayLight mb-6 leading-relaxed">
                             Founded on the principle that fitness should be accessible yet premium, FITCORE blends state-of-the-art technology with raw, uncompromising training methods. Our mission is to provide the environment, knowledge, and motivation you need to surpass your goals.
                         </p>
                         
-                        <div class="grid grid-cols-2 mt-10 gap-8">
+                        <div class="grid grid-cols-2 mt-8 sm:mt-10 gap-4 sm:gap-8 gap-y-8">
                             <div>
-                                <h3 class="text-4xl font-heading text-neon font-bold mb-1"><span class="stat-counter" data-target="50">0</span>+</h3>
+                                <h3 class="text-3xl sm:text-4xl font-heading text-neon font-bold mb-1"><span class="stat-counter" data-target="50">0</span>+</h3>
                                 <p class="text-grayLight text-sm font-semibold uppercase tracking-wider">Expert Trainers</p>
                             </div>
                             <div>
-                                <h3 class="text-4xl font-heading text-neon font-bold mb-1">24/7</h3>
+                                <h3 class="text-3xl sm:text-4xl font-heading text-neon font-bold mb-1">24/7</h3>
                                 <p class="text-grayLight text-sm font-semibold uppercase tracking-wider">Facility Access</p>
                             </div>
                             <div>
-                                <h3 class="text-4xl font-heading text-neon font-bold mb-1"><span class="stat-counter" data-target="200">0</span>+</h3>
+                                <h3 class="text-3xl sm:text-4xl font-heading text-neon font-bold mb-1"><span class="stat-counter" data-target="200">0</span>+</h3>
                                 <p class="text-grayLight text-sm font-semibold uppercase tracking-wider">Modern Machines</p>
                             </div>
                             <div>
-                                <h3 class="text-4xl font-heading text-neon font-bold mb-1"><span class="stat-counter" data-target="10">0</span>k+</h3>
+                                <h3 class="text-3xl sm:text-4xl font-heading text-neon font-bold mb-1"><span class="stat-counter" data-target="10">0</span>k+</h3>
                                 <p class="text-grayLight text-sm font-semibold uppercase tracking-wider">Members Joined</p>
                             </div>
                         </div>
@@ -163,14 +163,14 @@
         <!-- Services Section -->
         <section id="services" class="py-24 bg-dark">
             <div class="container mx-auto px-4">
-                <div class="text-center mb-16 reveal">
+                <div class="text-center mb-10 md:mb-16 reveal">
                     <span class="text-electric font-heading tracking-widest font-bold uppercase mb-2 block">Core Programs</span>
-                    <h2 class="text-4xl md:text-5xl font-heading font-bold">Unleash Your <span class="text-gradient">Potential</span></h2>
+                    <h2 class="text-3xl md:text-5xl font-heading font-bold">Unleash Your <span class="text-gradient">Potential</span></h2>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Service 1 -->
-                    <div class="reveal bg-darker p-8 rounded-xl border border-white/5 card-hover group">
+                    <div class="reveal bg-darker p-6 md:p-8 rounded-xl border border-white/5 card-hover group">
                         <div class="w-16 h-16 bg-neon/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-neon/20 transition-colors">
                             <i class="fas fa-dumbbell text-3xl text-neon"></i>
                         </div>
@@ -180,7 +180,7 @@
                     </div>
                     
                     <!-- Service 2 -->
-                    <div class="reveal bg-darker p-8 rounded-xl border border-white/5 card-hover group" style="transition-delay: 100ms;">
+                    <div class="reveal bg-darker p-6 md:p-8 rounded-xl border border-white/5 card-hover group" style="transition-delay: 100ms;">
                         <div class="w-16 h-16 bg-electric/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-electric/20 transition-colors">
                             <i class="fas fa-fire pr-1 text-3xl text-electric"></i>
                         </div>
@@ -190,7 +190,7 @@
                     </div>
                     
                     <!-- Service 3 -->
-                    <div class="reveal bg-darker p-8 rounded-xl border border-white/5 card-hover group" style="transition-delay: 200ms;">
+                    <div class="reveal bg-darker p-6 md:p-8 rounded-xl border border-white/5 card-hover group" style="transition-delay: 200ms;">
                         <div class="w-16 h-16 bg-neon/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-neon/20 transition-colors">
                             <i class="fas fa-heartbeat text-3xl text-neon"></i>
                         </div>
@@ -200,7 +200,7 @@
                     </div>
 
                     <!-- Service 4 -->
-                    <div class="reveal bg-darker p-8 rounded-xl border border-white/5 card-hover group">
+                    <div class="reveal bg-darker p-6 md:p-8 rounded-xl border border-white/5 card-hover group">
                         <div class="w-16 h-16 bg-electric/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-electric/20 transition-colors">
                             <i class="fas fa-running text-3xl text-electric"></i>
                         </div>
@@ -210,7 +210,7 @@
                     </div>
 
                     <!-- Service 5 -->
-                    <div class="reveal bg-darker p-8 rounded-xl border border-white/5 card-hover group" style="transition-delay: 100ms;">
+                    <div class="reveal bg-darker p-6 md:p-8 rounded-xl border border-white/5 card-hover group" style="transition-delay: 100ms;">
                         <div class="w-16 h-16 bg-neon/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-neon/20 transition-colors">
                             <i class="fas fa-spa text-3xl text-neon"></i>
                         </div>
@@ -220,7 +220,7 @@
                     </div>
 
                     <!-- Service 6 -->
-                    <div class="reveal bg-darker p-8 rounded-xl border border-white/5 card-hover group" style="transition-delay: 200ms;">
+                    <div class="reveal bg-darker p-6 md:p-8 rounded-xl border border-white/5 card-hover group" style="transition-delay: 200ms;">
                         <div class="w-16 h-16 bg-electric/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-electric/20 transition-colors">
                             <i class="fas fa-apple-alt text-3xl text-electric"></i>
                         </div>
@@ -235,15 +235,15 @@
         <!-- Trainers Section -->
         <section id="trainers" class="py-24 bg-darker">
             <div class="container mx-auto px-4">
-                <div class="text-center mb-16 reveal">
+                <div class="text-center mb-10 md:mb-16 reveal">
                     <span class="text-neon font-heading tracking-widest font-bold uppercase mb-2 block">Elite Coaches</span>
-                    <h2 class="text-4xl md:text-5xl font-heading font-bold">Meet The <span class="text-gradient">Core Team</span></h2>
+                    <h2 class="text-3xl md:text-5xl font-heading font-bold">Meet The <span class="text-gradient">Core Team</span></h2>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     <!-- Trainer 1 -->
                     <div class="reveal bg-dark rounded-xl overflow-hidden card-hover group">
-                        <div class="relative h-80 overflow-hidden">
+                        <div class="relative h-64 sm:h-80 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=800&auto=format&fit=crop" alt="Trainer 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                             <div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/20 to-transparent opacity-80"></div>
                             <div class="absolute bottom-4 left-0 w-full flex justify-center space-x-4 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
@@ -260,7 +260,7 @@
                     
                     <!-- Trainer 2 -->
                     <div class="reveal bg-dark rounded-xl overflow-hidden card-hover group" style="transition-delay: 100ms;">
-                        <div class="relative h-80 overflow-hidden">
+                        <div class="relative h-64 sm:h-80 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop" alt="Trainer 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" style="object-position: top;">
                             <div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/20 to-transparent opacity-80"></div>
                             <div class="absolute bottom-4 left-0 w-full flex justify-center space-x-4 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
@@ -277,7 +277,7 @@
 
                     <!-- Trainer 3 -->
                     <div class="reveal bg-dark rounded-xl overflow-hidden card-hover group" style="transition-delay: 200ms;">
-                        <div class="relative h-80 overflow-hidden">
+                        <div class="relative h-64 sm:h-80 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&auto=format&fit=crop" alt="Trainer 3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                             <div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/20 to-transparent opacity-80"></div>
                             <div class="absolute bottom-4 left-0 w-full flex justify-center space-x-4 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
@@ -298,14 +298,14 @@
         <!-- Pricing Section -->
         <section id="pricing" class="py-24 bg-dark relative">
             <div class="container mx-auto px-4">
-                <div class="text-center mb-16 reveal">
+                <div class="text-center mb-10 md:mb-16 reveal">
                     <span class="text-neon font-heading tracking-widest font-bold uppercase mb-2 block">Memberships</span>
-                    <h2 class="text-4xl md:text-5xl font-heading font-bold">Choose Your <span class="text-gradient">Tier</span></h2>
+                    <h2 class="text-3xl md:text-5xl font-heading font-bold">Choose Your <span class="text-gradient">Tier</span></h2>
                 </div>
                 
-                <div class="flex flex-col lg:flex-row justify-center items-center gap-8 max-w-6xl mx-auto">
+                <div class="flex flex-col lg:flex-row justify-center lg:items-stretch items-center gap-6 lg:gap-8 max-w-6xl mx-auto px-2 md:px-0">
                     <!-- Basic Plan -->
-                    <div class="reveal w-full lg:w-1/3 bg-darker p-8 rounded-2xl border border-white/10 hover:border-white/30 transition-colors pricing-card card-hover" data-plan="Basic" data-price="2499">
+                    <div class="reveal w-full lg:w-1/3 bg-darker p-6 xl:p-8 rounded-2xl border border-white/10 hover:border-white/30 transition-colors pricing-card card-hover" data-plan="Basic" data-price="2499">
                         <h3 class="text-2xl font-heading font-bold mb-2">Basic</h3>
                         <p class="text-grayLight mb-6">For casual gym-goers</p>
                         <div class="mb-8">
@@ -321,7 +321,7 @@
                     </div>
 
                     <!-- Pro Plan (Recommended) -->
-                    <div class="reveal w-full lg:w-1/3 bg-gradient-accent p-8 rounded-2xl border flex flex-col justify-between border-neon transform lg:scale-105 shadow-[0_0_30px_rgba(57,255,20,0.2)] lg:-translate-y-4 pricing-card card-hover" data-plan="Pro" data-price="4199">
+                    <div class="reveal w-full lg:w-1/3 bg-gradient-accent p-6 xl:p-8 rounded-2xl border flex flex-col justify-between border-neon lg:transform lg:scale-105 shadow-[0_0_30px_rgba(57,255,20,0.2)] lg:-translate-y-4 pricing-card card-hover" data-plan="Pro" data-price="4199">
                         <div>
                             <div class="flex justify-between items-center mb-2">
                                 <h3 class="text-2xl font-heading font-bold">Pro</h3>
@@ -342,7 +342,7 @@
                     </div>
 
                     <!-- Elite Plan -->
-                    <div class="reveal w-full lg:w-1/3 bg-darker p-8 rounded-2xl border border-white/10 hover:border-white/30 transition-colors pricing-card card-hover" data-plan="Elite" data-price="7499">
+                    <div class="reveal w-full lg:w-1/3 bg-darker p-6 xl:p-8 rounded-2xl border border-white/10 hover:border-white/30 transition-colors pricing-card card-hover" data-plan="Elite" data-price="7499">
                         <h3 class="text-2xl font-heading font-bold mb-2">Elite</h3>
                         <p class="text-grayLight mb-6">For absolute results</p>
                         <div class="mb-8">
@@ -448,7 +448,7 @@
         <section id="testimonials" class="py-24 bg-dark">
             <div class="container mx-auto px-4 text-center max-w-4xl reveal">
                 <span class="text-electric font-heading tracking-widest font-bold uppercase mb-2 block">Success Stories</span>
-                <h2 class="text-4xl md:text-5xl font-heading font-bold mb-16">What Our <span class="text-gradient">Members Say</span></h2>
+                <h2 class="text-3xl md:text-5xl font-heading font-bold mb-10 md:mb-16">What Our <span class="text-gradient">Members Say</span></h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8text-left">
                     <div class="bg-darker p-8 rounded-2xl border border-white/5 relative card-hover text-left">
@@ -487,25 +487,25 @@
         <!-- Gallery Section -->
         <section id="gallery" class="py-2">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-1">
-                <div class="overflow-hidden relative group h-64">
+                <div class="overflow-hidden relative group h-48 md:h-64">
                     <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800&auto=format&fit=crop" alt="Gym 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-neon/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <i class="fas fa-search-plus text-darker text-3xl"></i>
                     </div>
                 </div>
-                <div class="overflow-hidden relative group h-64">
+                <div class="overflow-hidden relative group h-48 md:h-64">
                     <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop" alt="Gym 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-electric/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <i class="fas fa-search-plus text-darker text-3xl"></i>
                     </div>
                 </div>
-                <div class="overflow-hidden relative group h-64">
+                <div class="overflow-hidden relative group h-48 md:h-64">
                     <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=800&auto=format&fit=crop" alt="Gym 3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-neon/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <i class="fas fa-search-plus text-darker text-3xl"></i>
                     </div>
                 </div>
-                <div class="overflow-hidden relative group h-64">
+                <div class="overflow-hidden relative group h-48 md:h-64">
                     <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=800&auto=format&fit=crop" alt="Gym 4" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-electric/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <i class="fas fa-search-plus text-darker text-3xl"></i>
@@ -522,7 +522,7 @@
                     <!-- Contact Info & Form -->
                     <div class="reveal-left lg:w-1/2">
                         <span class="text-neon font-heading tracking-widest font-bold uppercase mb-2 block">Reach Out</span>
-                        <h2 class="text-4xl md:text-5xl font-heading font-bold mb-8">Start Your <span class="text-gradient">Journey</span></h2>
+                        <h2 class="text-3xl md:text-5xl font-heading font-bold mb-8">Start Your <span class="text-gradient">Journey</span></h2>
                         
                         <div class="flex flex-col space-y-6 mb-10 text-grayLight">
                             <div class="flex items-center">
@@ -558,7 +558,7 @@
                     </div>
 
                     <!-- Map Placeholder -->
-                    <div class="reveal-right lg:w-1/2 min-h-[400px] bg-dark rounded-2xl overflow-hidden relative border border-white/5">
+                    <div class="reveal-right lg:w-1/2 min-h-[300px] md:min-h-[400px] bg-dark rounded-2xl overflow-hidden relative border border-white/5">
                         <!-- Simulated map using an image or styled iframe -->
                         <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center grayscale opacity-30 mix-blend-luminosity"></div>
                         <div class="absolute inset-0 bg-darker/60 flex items-center justify-center">
@@ -637,7 +637,7 @@
                 <button id="tab-login" class="flex-1 py-4 font-bold text-center border-b-2 border-neon text-neon transition-colors">LOGIN</button>
                 <button id="tab-signup" class="flex-1 py-4 font-bold text-center border-b-2 border-transparent text-grayLight hover:text-white transition-colors">SIGN UP</button>
             </div>
-            <div class="p-8">
+            <div class="p-6 md:p-8">
                 <!-- Login Form -->
                 <form id="form-login" class="space-y-4">
                     <div>
@@ -675,10 +675,10 @@
     <div id="checkout-modal" class="modal-overlay fixed inset-0 bg-darker/90 z-[60] flex items-center justify-center p-4">
         <div class="modal-content bg-dark border border-white/10 rounded-2xl w-full max-w-lg overflow-hidden relative shadow-2xl modal-scroll max-h-[90vh] overflow-y-auto">
             <button class="close-modal absolute top-4 right-4 text-grayLight hover:text-white z-10"><i class="fas fa-times text-xl"></i></button>
-            <div class="p-8">
-                <h2 class="text-3xl font-heading font-bold mb-6 border-b border-white/10 pb-4">Checkout Summary</h2>
+            <div class="p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-heading font-bold mb-6 border-b border-white/10 pb-4">Checkout Summary</h2>
                 
-                <div class="bg-darker rounded-xl p-6 mb-6 border border-white/5">
+                <div class="bg-darker rounded-xl p-4 md:p-6 mb-6 border border-white/5">
                     <div class="flex justify-between items-center mb-4">
                         <div>
                             <p class="text-grayLight text-sm uppercase tracking-wider mb-1">Selected Plan</p>
@@ -713,24 +713,24 @@
             <button class="close-modal absolute top-2 right-2 text-grayLight hover:text-white z-10 w-8 h-8 flex items-center justify-center bg-darker rounded-full"><i class="fas fa-times"></i></button>
             
             <!-- Sidebar -->
-            <div class="w-full md:w-1/3 bg-darker border-r border-white/10 p-4 flex flex-col gap-2">
-                <h3 class="text-sm font-bold text-grayLight uppercase tracking-wider mb-2 pl-2">Payment Options</h3>
-                <button class="payment-tab active bg-white/5 p-3 rounded-lg text-left flex items-center hover:bg-white/10 transition-colors" data-target="pay-upi">
+            <div class="w-full md:w-1/3 bg-darker border-b md:border-b-0 md:border-r border-white/10 p-4 flex flex-row overflow-x-auto md:flex-col gap-2 modal-scroll shrink-0 whitespace-nowrap md:whitespace-normal">
+                <h3 class="hidden md:block text-sm font-bold text-grayLight uppercase tracking-wider mb-2 pl-2">Payment Options</h3>
+                <button class="payment-tab shrink-0 active bg-white/5 p-3 rounded-lg text-left flex items-center hover:bg-white/10 transition-colors" data-target="pay-upi">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/UPI-Logo-vector.svg" alt="UPI" class="h-4 w-auto mr-3 bg-white/90 p-0.5 rounded-sm"> UPI
                 </button>
-                <button class="payment-tab bg-white/5 p-3 rounded-lg text-left flex items-center hover:bg-white/10 transition-colors" data-target="pay-card">
+                <button class="payment-tab shrink-0 bg-white/5 p-3 rounded-lg text-left flex items-center hover:bg-white/10 transition-colors" data-target="pay-card">
                     <i class="fas fa-credit-card mr-3 text-grayLight w-5 text-center"></i> Card
                 </button>
-                <button class="payment-tab bg-white/5 p-3 rounded-lg text-left flex items-center hover:bg-white/10 transition-colors" data-target="pay-net">
+                <button class="payment-tab shrink-0 bg-white/5 p-3 rounded-lg text-left flex items-center hover:bg-white/10 transition-colors" data-target="pay-net">
                     <i class="fas fa-university mr-3 text-grayLight w-5 text-center"></i> Net Banking
                 </button>
-                <button class="payment-tab bg-white/5 p-3 rounded-lg text-left flex items-center hover:bg-white/10 transition-colors" data-target="pay-wallet">
+                <button class="payment-tab shrink-0 bg-white/5 p-3 rounded-lg text-left flex items-center hover:bg-white/10 transition-colors" data-target="pay-wallet">
                     <i class="fas fa-wallet mr-3 text-grayLight w-5 text-center"></i> Wallet
                 </button>
             </div>
             
             <!-- Details -->
-            <div class="w-full md:w-2/3 p-8 flex flex-col justify-between">
+            <div class="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-between">
                 <div>
                     <div class="flex justify-between items-end border-b border-white/10 pb-4 mb-6">
                         <span class="text-grayLight">Amount to Pay</span>
@@ -827,29 +827,29 @@
 
     <!-- 5. Dashboard Modal -->
     <div id="dashboard-modal" class="modal-overlay fixed inset-0 bg-darker/95 z-[60] flex items-center justify-center p-4">
-        <div class="modal-content bg-dark border border-white/10 rounded-2xl w-full max-w-5xl h-[85vh] overflow-hidden relative shadow-2xl flex flex-col md:flex-row">
-            <button class="close-modal absolute top-4 right-4 text-grayLight hover:text-white z-[65]"><i class="fas fa-times text-xl"></i></button>
+        <div class="modal-content bg-dark border border-white/10 rounded-2xl w-full max-w-5xl h-[95vh] md:h-[85vh] overflow-hidden relative shadow-2xl flex flex-col md:flex-row">
+            <button class="close-modal absolute top-3 right-3 md:top-4 md:right-4 text-grayLight hover:text-white z-[65] bg-darker/60 md:bg-transparent p-2 rounded-full md:p-0"><i class="fas fa-times text-xl flex items-center justify-center"></i></button>
             
             <!-- Sidebar -->
-            <div class="w-full md:w-64 bg-darker border-r border-white/5 p-6 flex flex-col h-full overflow-y-auto modal-scroll shrink-0">
-                <div class="mb-8 p-4 bg-white/5 rounded-xl text-center">
+            <div class="w-full md:w-64 bg-darker border-b md:border-b-0 md:border-r border-white/5 p-4 md:p-6 flex flex-col md:overflow-y-auto modal-scroll shrink-0 z-20">
+                <div class="hidden md:block mb-8 p-4 bg-white/5 rounded-xl text-center">
                     <div class="w-16 h-16 bg-neon text-darker mx-auto rounded-full flex items-center justify-center text-2xl font-bold mb-3 shadow-[0_0_15px_rgba(57,255,20,0.4)]" id="dash-avatar">U</div>
                     <h3 id="dash-name" class="font-bold text-white line-clamp-1">User Name</h3>
                     <p id="dash-email" class="text-xs text-grayLight truncate">user@email.com</p>
                 </div>
                 
-                <nav class="flex-1 space-y-2" id="dashboard-nav">
-                    <a href="#" class="dash-nav-tab active block p-3 rounded-lg transition-colors font-bold dashboard-tab" data-target="dash-pane-overview"><i class="fas fa-home w-6 text-center"></i> Overview</a>
-                    <a href="#" class="dash-nav-tab block p-3 rounded-lg text-grayLight hover:bg-white/5 hover:text-white transition-colors dashboard-tab" data-target="dash-pane-memberships"><i class="fas fa-box w-6 text-center"></i> Memberships</a>
-                    <a href="#" class="dash-nav-tab block p-3 rounded-lg text-grayLight hover:bg-white/5 hover:text-white transition-colors dashboard-tab" data-target="dash-pane-billing"><i class="fas fa-file-invoice w-6 text-center"></i> Billing</a>
-                    <a href="#" class="dash-nav-tab block p-3 rounded-lg text-grayLight hover:bg-white/5 hover:text-white transition-colors dashboard-tab" data-target="dash-pane-settings"><i class="fas fa-cog w-6 text-center"></i> Settings</a>
+                <nav class="flex flex-row md:flex-col overflow-x-auto md:overflow-visible gap-2 md:space-y-2 pb-2 md:pb-0 modal-scroll whitespace-nowrap md:whitespace-normal" id="dashboard-nav">
+                    <a href="#" class="dash-nav-tab inline-block active p-3 rounded-lg transition-colors font-bold dashboard-tab" data-target="dash-pane-overview"><i class="fas fa-home w-6 text-center"></i> Overview</a>
+                    <a href="#" class="dash-nav-tab inline-block p-3 rounded-lg text-grayLight hover:bg-white/5 hover:text-white transition-colors dashboard-tab" data-target="dash-pane-memberships"><i class="fas fa-box w-6 text-center"></i> Memberships</a>
+                    <a href="#" class="dash-nav-tab inline-block p-3 rounded-lg text-grayLight hover:bg-white/5 hover:text-white transition-colors dashboard-tab" data-target="dash-pane-billing"><i class="fas fa-file-invoice w-6 text-center"></i> Billing</a>
+                    <a href="#" class="dash-nav-tab inline-block p-3 rounded-lg text-grayLight hover:bg-white/5 hover:text-white transition-colors dashboard-tab" data-target="dash-pane-settings"><i class="fas fa-cog w-6 text-center"></i> Settings</a>
+                    
+                    <button id="dash-logout-trigger-btn" class="inline-block p-3 text-red-500 hover:bg-red-500/10 rounded-lg transition-colors flex items-center justify-center gap-2 md:mt-8"><i class="fas fa-sign-out-alt"></i> Logout</button>
                 </nav>
-                
-                <button id="dash-logout-trigger-btn" class="mt-8 p-3 text-red-500 hover:bg-red-500/10 rounded-lg transition-colors flex items-center justify-center gap-2"><i class="fas fa-sign-out-alt"></i> Logout</button>
             </div>
 
             <!-- Content Area -->
-            <div class="flex-1 p-8 overflow-y-auto modal-scroll bg-gradient-to-br from-dark to-darker relative w-full">
+            <div class="flex-1 p-6 md:p-8 overflow-y-auto modal-scroll bg-gradient-to-br from-dark to-darker relative w-full pt-10 md:pt-8">
                 
                 <!-- Overview Pane -->
                 <div id="dash-pane-overview" class="dash-pane active block animation-fade-in">
@@ -1021,7 +1021,7 @@
 
     <!-- 6. Book Class Modal -->
     <div id="book-class-modal" class="modal-overlay fixed inset-0 bg-darker/95 z-[80] flex items-center justify-center p-4">
-        <div class="modal-content bg-gradient-to-br from-dark to-darker border border-electric/30 rounded-2xl w-full max-w-md overflow-hidden relative shadow-2xl p-8 text-center">
+        <div class="modal-content bg-gradient-to-br from-dark to-darker border border-electric/30 rounded-2xl w-full max-w-md overflow-hidden relative shadow-2xl p-6 md:p-8 text-center">
             <button class="close-modal absolute top-4 right-4 text-grayLight hover:text-white z-10"><i class="fas fa-times text-xl"></i></button>
             <i class="fas fa-dumbbell text-4xl text-electric mb-4"></i>
             <h3 class="text-2xl font-bold mb-6 font-heading">Book a <span class="text-electric">Class</span></h3>

@@ -2,6 +2,9 @@
 
 html, body {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
 }
 
 /* Custom Scrollbar */
@@ -167,6 +170,7 @@ nav.scrolled {
 /* Custom Scrollbar for Modals */
 .modal-scroll::-webkit-scrollbar {
     width: 6px;
+    height: 4px;
 }
 .modal-scroll::-webkit-scrollbar-track {
     background: transparent;
@@ -177,6 +181,14 @@ nav.scrolled {
 }
 .modal-scroll::-webkit-scrollbar-thumb:hover {
     background: rgba(57, 255, 20, 0.8);
+}
+
+/* Hide horizontal scrollbar on mobile UI tabs */
+@media (max-width: 767px) {
+    .modal-scroll::-webkit-scrollbar {
+        height: 0px;
+        width: 0px;
+    }
 }
 
 /* Loader Animation */
